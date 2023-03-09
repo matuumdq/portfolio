@@ -1,7 +1,7 @@
 import { RxRocket } from 'react-icons/rx'
 import { DiMongodb, DiMysql } from 'react-icons/di'
 import { FaReact, FaNodeJs, FaGithub } from 'react-icons/fa'
-import { SiTailwindcss, SiPrisma, SiFirebase, SiSupabase, SiMobx,  } from 'react-icons/si'
+import { SiTailwindcss, SiPrisma, SiFirebase, SiSupabase, SiMobx, SiMui } from 'react-icons/si'
 import { TbBrandReactNative, TbBrandNextjs, TbBrandVercel } from 'react-icons/tb'
 
 const ProjectsItem = ({img, title, deploy, github}) => {
@@ -34,7 +34,7 @@ const ProjectsItem = ({img, title, deploy, github}) => {
                     : title === 'Youtube Clone' ?
                         <div className='flex gap-3 w-full flex-wrap justify-center mb-5 text-[#001b5e] hover:scale-110 ease-in duration-200'>
                             <FaReact size={30} />
-                            {/* <SiMaterialui size={30} /> */}
+                            <SiMui size={30} />
                             <TbBrandVercel size={30} />
                             <FaGithub size={30} />
                         </div> 

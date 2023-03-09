@@ -1,7 +1,7 @@
 import { AiFillHtml5 } from "react-icons/ai"
 import { DiCss3, DiMongodb, DiMysql } from 'react-icons/di'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiTailwindcss, SiJavascript, SiPrisma, SiFirebase, SiSupabase, SiMobx,  } from 'react-icons/si'
+import { SiTailwindcss, SiJavascript, SiPrisma, SiFirebase, SiSupabase, SiMobx, SiMui} from 'react-icons/si'
 import { TbBrandReactNative, TbBrandNextjs, TbBrandVercel } from 'react-icons/tb'
 
 const Skills = () => {
@@ -28,10 +28,10 @@ const Skills = () => {
                 </p>
             </div>
             <div className="flex items-center gap-3 font-bold text-[#274b91] hover:scale-110 hover:cursor-default hover:text-[#4091c9] ease-in duration-300">
-            {/* <SiMaterialui size={50}/>
+            <SiMui size={50}/>
                 <p>
                     Material UI
-                </p> */}
+                </p>
             </div>
             <div className="flex items-center gap-3 font-bold text-[#274b91] hover:scale-110 hover:cursor-default hover:text-[#4091c9] ease-in duration-300">
             <SiJavascript size={50}/>
