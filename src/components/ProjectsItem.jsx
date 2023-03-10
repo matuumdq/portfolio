@@ -76,9 +76,15 @@ const ProjectsItem = ({img, title, deploy, github}) => {
                             <TbBrandVercel size={30} />
                             <FaGithub size={30} />
                         </div>
-                        : title === 'Guitar app' ?
+                        : title === 'Cripto app' ?
                         <div className='flex gap-3 w-full flex-wrap justify-center mb-5 text-[#001b5e] hover:scale-110 ease-in duration-200'>
-                            <TbBrandNextjs size={30} />
+                            <FaReact size={30} />
+                            <TbBrandVercel size={30} />
+                            <FaGithub size={30} />
+                        </div>
+                        : title === 'CRM app' ?
+                        <div className='flex gap-3 w-full flex-wrap justify-center mb-5 text-[#001b5e] hover:scale-110 ease-in duration-200'>
+                            <SiTailwindcss size={30} />
                             <TbBrandVercel size={30} />
                             <FaGithub size={30} />
                         </div>

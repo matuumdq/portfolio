@@ -26,7 +26,7 @@ const Projects = () => {
                 </p>
         </div>
        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:ml-14 lg:mx-auto">
             <ProjectsItem img={quioscoImg} title='Quiosco app' deploy='https://quiosco-production.up.railway.app/' github='https://github.com/matuumdq/quiosco'/>
             <ProjectsItem img={todoImg} title='ToDo app' deploy='https://todoauth-ashen.vercel.app/' github='https://github.com/matuumdq/autenticationFirebase'/>
             <ProjectsItem img={youtubeImg} title='Youtube Clone' deploy='https://youtubeclone-iota.vercel.app/' github='https://github.com/matuumdq/youtubeclone'/>
@@ -35,6 +35,7 @@ const Projects = () => {
             <ProjectsItem img={weatherImg} title='Clima app'  deploy='https://weather-zeta-azure.vercel.app/' github='https://github.com/matuumdq/weather'/>
             <ProjectsItem img={charactersImg} title='Counter app' deploy='https://charactercounter-delta.vercel.app' github='https://github.com/matuumdq/charactercounter'/>
             <ProjectsItem img={criptocotImg} title='Cripto app' deploy='https://cripto-react-omega.vercel.app' github='https://github.com/matuumdq/criptoReact'/>
+            <ProjectsItem img={crmImg} title='CRM app' deploy='https://admin-clientes.vercel.app/' github='https://github.com/matuumdq/admin-clientes'/>
             <ProjectsItem img={guitarImg} title='Guitar app' deploy='https://guitar-next-nine.vercel.app/' github='https://github.com/matuumdq/guitarNext-'/>
             <ProjectsItem img={planificadorImg} title='Planificador app' deploy='https://quoter-seven.vercel.app/' github='https://github.com/matuumdq/quoter'/>
         </div>

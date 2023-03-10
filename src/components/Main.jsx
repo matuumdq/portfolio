@@ -1,3 +1,4 @@
+import React from 'react'
 import { TypeAnimation } from 'react-type-animation'
 import perfilImg from '../assets/perfil.png'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
@@ -8,8 +9,8 @@ const Main = () => {
     <div id='main' className=''>
         <div className='w-full h-screen top-0 left-0 '>
             <div className='max-w-[1024px] m-auto h-full w-full flex flex-col justify-center items-center lg:items-start'>
-                <div className='flex flex-col gap-20 lg:flex-row-reverse items-center md:ml-24 '>
-                    <img src={perfilImg} alt="/" className='shadow rounded-full w-[400px] h-auto align-middle border-none mt-10 md:mt-0'/>
+                <div className='flex flex-col gap-12 lg:flex-row-reverse items-center md:ml-40'>
+                    <img src={perfilImg} alt="/" className='shadow rounded-full w-[320px] h-auto align-middle border-none mt-10 md:mt-0'/>
                     
                     <div className='flex flex-col items-center lg:items-start'>
                         <h1 className='sm:text-5xl text-4xl text-[#4091c9]'>I am  <span className='font-bold text-[#274b91]'>Mateo Salinas</span></h1>

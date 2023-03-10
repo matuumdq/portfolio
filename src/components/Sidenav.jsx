@@ -1,11 +1,12 @@
 import { useRef, useState } from 'react'
 import {AiOutlineHome, AiOutlineMenu, AiOutlineProject, AiOutlineMail, AiOutlineAppstoreAdd, AiOutlineClose} from 'react-icons/ai'
-import { RxPerson } from 'react-icons/rx'
+import { BsFillPersonFill } from "react-icons/bs";
 import { SiGmail } from 'react-icons/si'
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa'
 import Logo from '../assets/logo.png'
 
 const Sidenav = () => {
+
     const [nav, setNave] = useState(false)
     const [hovered, setHovered] = useState(false)
     const ref = useRef(null)
@@ -19,74 +20,84 @@ const Sidenav = () => {
 
 
   return (
-    <div>
-        <div className='fixed z-50 w-full shadow-xl bg-black/60 h-12 md:hidden'>
-            <AiOutlineMenu 
-                onClick={handleNav}
-                className='fixed block top-1 right-1 cursor-pointer rounded-md p-2 md:hidden hover:scale-125 ease-in duration-300'
-                color='#067bc2'
-                size={40}
-            />
+    <div className=''>
+        {!nav && <a href="#main"><img src={Logo} alt="logo" width={100} className='ml-10 mt-1 fixed'/></a>}
+        <div className='fixed flex justify-between w-full z-50 h-12 md:hidden'>
+            {nav 
+                ?   <AiOutlineClose 
+                        onClick={handleNav}
+                        className='fixed block top-1 right-1 cursor-pointer rounded-md p-2 md:hidden hover:scale-110 ease-in-out duration-300 bg-black/60'
+                        color='#4091c9'
+                        size={40}
+                    />
+                :   <AiOutlineMenu 
+                        onClick={handleNav}
+                        className='fixed block top-1 right-1 cursor-pointer rounded-md p-2 md:hidden hover:scale-110 ease-in-out duration-300 bg-black/60'
+                        color='#4091c9'
+                        size={40}
+                    />
+            }
+            
         </div>
 
 
         {/* Sidenav in phone */}
         <div className={nav 
-            ? 'md:hidden fixed left-0 top-0 w-full h-[100vh] bg-black/50 z-50' 
+            ? 'md:hidden fixed left-0 top-0 w-full h-[100vh] bg-black/50 z-40' 
             : ''
         }>
             <div className={nav 
-                ? 'fixed left-0 top-0 w-[80%] sm:w-[60%] md:[45%] h-screen bg-[#93c4e9] p-10 ease-in duration-300' 
-                : 'fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-300'
+                ? 'fixed left-0 top-0 w-[80%] sm:w-[60%] md:[45%] h-screen bg-[#abd9fc] p-10 ease-in-out duration-300' 
+                : 'fixed left-[-100%] top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#93c4e9] p-10 ease-in duration-300'
             }>
                 <div className='flex w-full items-center justify-between'>
                     <img src={Logo} alt="logo" />
-                    <div onClick={handleNav} className='rounded-full shadow-lg shadow-gray-600 p-3 cursor-pointer hover:scale-110 hover:bg-[#1b83e4] ease-in duration-300'>
-                        <AiOutlineClose />
+                    <div onClick={handleNav} className='rounded-full shadow-lg hover:bg-[#4091c9] shadow-gray-600 p-3 cursor-pointer hover:scale-110 ease-in-out duration-300'>
+                        <AiOutlineClose color='#000' size={18}/>
                     </div>
                 </div>
 
                 <div className='py-4 flex flex-col justify-between h-full'>
-                    <ul className='flex flex-col justify-start sm:m-5 sm:p-5'>
+                    <ul className='flex flex-col justify-start sm:m-5 sm:p-5 gap-2'>
                         <a
                                 onClick={handleNav} 
                                 href='#main' 
-                                className='w-[70%] flex items-center rounded-md shadow-md bg-[#067bc2] shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
+                                className='w-[70%] flex items-center hover:text-white rounded shadow-lg bg-[#93c4e9] hover:bg-[#1b669c] shadow-gray-800 mb-4 p-3 cursor-pointer hover:scale-110 ease-in-out duration-300'
                             >
-                                    <AiOutlineHome size={24} color='#e8f1f2' className=''/>
-                                    <li className='pl-4 font-bold text-[#e8f1f2]'>Home</li>
+                                    <AiOutlineHome size={24}  className=''/>
+                                    <li className='pl-4 font-bold'>Home</li>
                         </a>    
                         <a
                                 onClick={handleNav} 
                                 href='#aboutme' 
-                                className='w-[70%] flex items-center rounded-md shadow-md bg-[#067bc2] shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
+                                className='w-[70%] flex items-center hover:text-white rounded shadow-lg bg-[#93c4e9] hover:bg-[#1b669c] shadow-gray-800 mb-4 p-3 cursor-pointer hover:scale-110 ease-in-out duration-300'
                             >
-                                    <RxPerson size={24} color='#e8f1f2'/>
-                                    <li className='pl-4 font-bold text-[#e8f1f2] '>About me</li>
+                                    <BsFillPersonFill size={24} />
+                                    <li className='pl-4 font-bold'>About me</li>
                         </a>
                         <a
                                 onClick={handleNav} 
                                 href='#skills' 
-                                className='w-[70%] flex items-center rounded-md shadow-md bg-[#067bc2] shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
+                                className='w-[70%] flex items-center hover:text-white rounded shadow-lg bg-[#93c4e9] hover:bg-[#1b669c] shadow-gray-800 mb-4 p-3 cursor-pointer hover:scale-110 ease-in-out duration-300'
                             >
-                                    <AiOutlineProject size={24} color='#e8f1f2'/>
-                                    <li className='pl-4 font-bold text-[#e8f1f2]'>Skills</li>
+                                    <AiOutlineProject size={24} />
+                                    <li className='pl-4 font-bold'>Skills</li>
                         </a>
                         <a
                                 onClick={handleNav} 
                                 href='#projects' 
-                                className='w-[70%] flex items-center rounded-md shadow-md bg-[#067bc2] shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
+                                className='w-[70%] flex items-center hover:text-white rounded shadow-lg bg-[#93c4e9] hover:bg-[#1b669c] shadow-gray-800 mb-4 p-3 cursor-pointer hover:scale-110 ease-in-out duration-300'
                             >
-                                    <AiOutlineAppstoreAdd size={24} color='#e8f1f2'/>
-                                    <li className='pl-4 font-bold text-[#e8f1f2]'>Projects</li>
+                                    <AiOutlineAppstoreAdd size={24} />
+                                    <li className='pl-4 font-bold'>Projects</li>
                         </a>
                         <a
                                 onClick={handleNav} 
                                 href='#contact' 
-                                className='w-[70%] flex items-center rounded-md shadow-md bg-[#067bc2] shadow-gray-500 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-200'
+                                className='w-[70%] flex items-center hover:text-white rounded shadow-lg bg-[#93c4e9] hover:bg-[#1b669c] shadow-gray-800 mb-4 p-3 cursor-pointer hover:scale-110 ease-in-out duration-300'
                             >
-                                    <AiOutlineMail size={24} color='#e8f1f2'/>
-                                    <li className='pl-4 font-bold text-[#e8f1f2]'>Contact me</li>
+                                    <AiOutlineMail size={24} />
+                                    <li className='pl-4 font-bold'>Contact me</li>
                         </a>
                     </ul>
 
@@ -120,7 +131,7 @@ const Sidenav = () => {
                             <AiOutlineHome size={20} color='#e8f1f2'/>
                             <div 
                                 style={{width : hovered ? ref.current?.offsetWidth || 0 : 0 }}
-                                className='overflow-x-hidden transition-all duration-200 ease-in-out'
+                                className='overflow-x-hidden transition-all duration-200 ease-out'
                             >
                                 <span ref={ref} className='px-1.5'>Home</span>
                             </div>
@@ -130,7 +141,7 @@ const Sidenav = () => {
                             onMouseLeave={()=>setHovered(false)}
                             href="#aboutme" 
                             className='rounded-full flex shadow-lg bg-[#4091c9] shadow-gray-400 m-2 p-4 cursor-pointer hover:scale-110 ease-in duration-300'>
-                            <RxPerson size={20} color='#e8f1f2'/>
+                            <BsFillPersonFill size={20} color='#e8f1f2'/>
                             <div 
                                 style={{width : hovered ? ref.current?.offsetWidth || 0 : 0 }}
                                 className='overflow-x-hidden transition-all duration-200 ease-out'
